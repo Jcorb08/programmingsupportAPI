@@ -11,7 +11,8 @@
         
     <h1>Programming Support</h1>
 
-    <!--Dropdown-->
+    <!--Drop down-->
+    <!--Update Content if changes?-->
     <form action="">
       <label for="Level">Programming Level:</label>
       <select name="Level" id="Level">
@@ -22,7 +23,13 @@
 
   </header>
 
-  <div id="Website"></div>
+  <!--Can only embed wiki and docs-->
+  <!--Use website for only api requests?-->
+  
+  <!-- add search bar? -->
+  <div id="Website">
+    <iframe src="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html"></iframe>
+  </div>
 
   <script src="assets/websiteChange.js"></script>
 </body>
