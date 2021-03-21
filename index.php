@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+    include "/assets/get_info.php";
+?>
 <head>
   <!--Imports-->
   <link rel="stylesheet" href="assets/style.css">
