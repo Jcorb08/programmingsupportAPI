@@ -10,11 +10,19 @@
     //JS THEN SELECTS AND EDITS CONTENT OF DIV TO CHANGE TO IT
     
     $query =  $_SERVER['QUERY_STRING'];    // gets q? from skill
-    echo $query;
+    echo "query = " . $query;
     
-    $sql = "SELECT Beginner, Experienced FROM " . $table;
+    $sql = "SELECT Beginner, Experienced FROM " . $table . "WHERE Question='" . $query . "'" ;
     $result = $conn->query($sql);
-    echo $result;
-
+    if ($result->num_rows > 0){
+        $return = "";
+        while ($row = $result->fetch_assoc()){
+            $return += $row['Beginner'] . '~' . $row['Experienced'] . '~';
+        }
+        echo $return;
+    }
+    else {
+        echo null;
+    }
     
 

@@ -1,0 +1,10 @@
+CREATE TABLE Queries (
+    id int NOT NULL AUTO_INCREMENT,
+    Question varchar(255) NOT NULL,
+    Beginner varchar(255) NOT NULL,
+    Experienced varchar(255) NOT NULL,
+    PRIMARY KEY (id)
+); 
+
+INSERT INTO Queries (Question, Beginner, Experienced)
+VALUES ('test', 'test beginner','test experienced');
