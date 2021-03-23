@@ -1,4 +1,4 @@
-$(document).ready(function(){
+window.onload = function(){
     var xmlHttp = new XMLHttpRequest();
     var htmlCode = "";
     var response;
@@ -18,4 +18,4 @@ $(document).ready(function(){
             // change to better html 
         }
     }
-});
+};
