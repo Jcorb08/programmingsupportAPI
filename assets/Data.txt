@@ -1,5 +1,5 @@
 localhost
 ProgrammingSupport
 Queries
-user
-user
+support
+support
