@@ -2,7 +2,7 @@
 
 // Ensure there is a User with only select permissions
 
-function getConnectionData($check){
+function getConnectionData(){
     $file = fopen('../assets/Data.txt', "r") or die("File unavailable!");
     $server = preg_replace('/\s+/', '', fgets($file));
     $db = preg_replace('/\s+/', '', fgets($file));
