@@ -27,8 +27,8 @@
   <!--Use website for only api requests?-->
   
   <!-- add search bar? -->
-  <div id="Website">
-    <!-- <iframe src="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html"></iframe> -->
+  <div class="Website_Container">
+      <div class="content" id="query"></div>
   </div>
 
   <script src="assets/websiteChange.js"></script>

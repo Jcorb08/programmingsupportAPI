@@ -20,7 +20,10 @@
   text-decoration: none;
 }
 
-#website {
+.Website_Container{
+  width: 100%;
+  background-color: #353535;
+  color: chocolate;
   margin-top: 50px;
 }
 
