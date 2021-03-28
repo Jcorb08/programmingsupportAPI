@@ -15,7 +15,7 @@
     <!--Update Content if changes?-->
     <form action="">
       <label for="Level">Programming Level:</label>
-      <select name="Level" id="Level">
+      <select name="Level" id="Level" onchange="select_change()">
         <option value="Experienced">Experienced</option>
         <option value="Beginner">Beginner</option>
       </select>

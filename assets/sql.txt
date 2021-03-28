@@ -1,10 +1,33 @@
-CREATE TABLE Queries (
-    id int NOT NULL AUTO_INCREMENT,
-    Question varchar(255) NOT NULL,
-    Beginner varchar(255) NOT NULL,
-    Experienced varchar(255) NOT NULL,
+CREATE TABLE Answers (
+    ID int NOT NULL AUTO_INCREMENT,
+    Header varchar(255) NOT NULL,
+    Text varchar(4096), 
+    Images varchar(4096),
     PRIMARY KEY (id)
 ); 
 
-INSERT INTO Queries (Question, Beginner, Experienced)
-VALUES ('test', 'test beginner','test experienced');
+CREATE TABLE Queries (
+    ID int NOT NULL AUTO_INCREMENT,
+    Question varchar(255) NOT NULL,
+    BeginnerID int NOT NULL,
+    ExperiencedID int NOT NULL,
+    PRIMARY KEY (id),
+    CONSTRAINT FK_BEGINNER
+    FOREIGN KEY (BeginnerID) references Answers(ID),
+    CONSTRAINT FK_Experienced
+    FOREIGN KEY (ExperiencedID) references Answers(ID)
+); 
+
+Insert into Queries(Question,BeginnerID,ExperiencedID)
+Values ('test',1,2);
+
+INSERT INTO Answers (Header)
+VALUES ('test experienced');
+
+User  Support
+Grant Select on both Queries and Answers
+
+INSERT INTO Answers (Header, Text, Images)
+VALUES ('<h3>FOR LOOP IN JAVA</h3>', '<p>The for statement provides a compact way to iterate over a range of values. Programmers often refer to it as the "for loop" because of the way in which it repeatedly loops until a particular condition is satisfied. The general form of the for statement can be seen in Figure 1.</p>','<code>for (initalise; terminate; increment){
+    //	STATEMENTS GO HERE //
+}</code>')

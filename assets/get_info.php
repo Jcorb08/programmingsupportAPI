@@ -1,24 +1,34 @@
 <?php
 
     include_once "getConn.php";
-    list($conn,$table) = getConnection();
+    $conn = getConnection();
     //GET CONNECTION DATA
-    //SELECT ANSWER FROM DATABASE
-    //TAKE ANSWER THAT IS WHAT DROPDOWN WANTS
-    //IN FORM OF HTML
-    //HTML THEN OUTPUTTED TO JS
-    //JS THEN SELECTS AND EDITS CONTENT OF DIV TO CHANGE TO IT
     
+    // GET LEVEL REQUIRED
+    $level = $_GET["l"];
+    
+    // GET QUERY_STRING
     $query = $_GET["q"];
-    $sql = "SELECT Beginner, Experienced FROM " . $table . " WHERE Question = '" . $query . "'";
-    $result = $conn->query($sql);
+    //SELECT ANSWER FROM DATABASE
+    $IDsql = "SELECT " . $level . "ID FROM Queries WHERE Question = '" . $query . "'";
+    $result = $conn->query($IDsql);
     if ($result->num_rows > 0){
-        $row = $result->fetch_assoc(); 
-        echo $row['Beginner'] . '~' . $row['Experienced'] . '~';
+        $sql = "SELECT Header, Text, Images FROM Answers WHERE ID = '" . $result-> fetch_array(MYSQLI_NUM)[0] . "'";
+        $result->close();
+        $result2 = $conn->query($sql);
+        if ($result2->num_rows > 0){
+            $row = $result2->fetch_assoc();
+            echo $row['Header'] . ' ' . $row['Text'] . ' ' . $row['Images'];
+            $result2->close();
+        }
+        else{
+           echo "num_rows <= 0 answer"; 
+           $result2->close();
+        }
     }
     else {
-        echo "num_rows <= 0";
+        echo "num_rows <= 0 query";
+        $result->close();
     }
-    $result->close();
     
 
