@@ -28,6 +28,31 @@ User  Support
 Grant Select on both Queries and Answers
 
 INSERT INTO Answers (Header, Text, Images)
-VALUES ('<h3>FOR LOOP IN JAVA</h3>', '<p>The for statement provides a compact way to iterate over a range of values. Programmers often refer to it as the "for loop" because of the way in which it repeatedly loops until a particular condition is satisfied. The general form of the for statement can be seen in Figure 1.</p>','<code>for (initalise; terminate; increment){
+VALUES ('<h3>FOR LOOP IN JAVA</h3>', '<p>The for statement provides a compact way to iterate over a range of values. Programmers often refer to it as the "for loop" because of the way in which it repeatedly loops until a particular condition is satisfied. The general form of the for statement can be seen in Figure 1.</p><p>When using this version of the for statement, keep in mind that:</p>
+<p>
+<li>The <em>initialization</em> expression initializes the loop; it's executed once, as the loop begins.</li>
+<li>When the <em>termination</em> expression evaluates to <code>false</code>, the loop terminates.</li>
+<li>The <em>increment</em> expression is invoked after each iteration through the loop; it is perfectly acceptable for this expression to increment <i>or</i> decrement a value.</li>
+</p>
+<p> Figure 2 shows an example that uses the general form of the for statement to print the numbers 1 through 10 to standard output, which can be seen in Figure 3.</p>
+','<p>Figure 1: Structure</p><code>for (initalise; terminate; increment){
     //	STATEMENTS GO HERE //
-}</code>')
+}</code>
+<p>Figure 2: Example Program</p><code>class ForExample {
+    public static void main(String[] args){
+         for(int i=1; i<11; i++){
+              System.out.println("Count is: " + i);
+         }
+    }
+}</code>
+<p>Figure 3: Output of Figure 2</p><code>Count is: 1
+Count is: 2
+Count is: 3
+Count is: 4
+Count is: 5
+Count is: 6
+Count is: 7
+Count is: 8
+Count is: 9
+Count is: 10</code>
+')
