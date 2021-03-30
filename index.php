@@ -22,9 +22,6 @@
     </form>
 
   </header>
-
-  <!--Can only embed wiki and docs-->
-  <!--Use website for only api requests?-->
   
   <!-- add search bar? -->
   <div class="Website_Container">
