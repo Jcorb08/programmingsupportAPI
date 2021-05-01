@@ -28,6 +28,10 @@
       <div class="content" id="query"></div>
   </div>
 
+  <footer class="footer">
+    <p> Information was obtained from the <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/">Java Documentation</a></p>
+  </footer>
+
   <script src="assets/websiteChange.js"></script>
 </body>
 </html>

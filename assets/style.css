@@ -43,3 +43,12 @@ body{
 .Website_Container img{
   position: relative;
 }
+
+.footer {
+  position: fixed;
+  bottom: 0;
+}
+
+.footer p {
+  text-align: left;
+}
