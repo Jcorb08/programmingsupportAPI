@@ -47,8 +47,13 @@ body{
 .footer {
   position: fixed;
   bottom: 0;
+  color: #FD9C00;
 }
 
 .footer p {
   text-align: left;
+}
+
+.footer a {
+  text-decoration: none;
 }
