@@ -23,11 +23,12 @@
 
   </header>
   
-  <!-- add search bar? -->
+  <!-- main content -->
   <div class="Website_Container">
       <div class="content" id="query"></div>
   </div>
 
+  <!-- footer with sources -->
   <footer class="footer">
     <p> Information was obtained from the <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/">Java Documentation</a></p>
   </footer>
